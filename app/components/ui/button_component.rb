@@ -1,13 +1,17 @@
 module UI
   class ButtonComponent < ViewComponent::Base
-    def initialize(variant: :default, size: :default, **options)
+    def initialize(variant: :default, size: :default, disabled: false, **options)
       @variant = variant
       @size = size
+      @disabled = disabled
       @options = options
     end
 
     def call
-      tag.button(content, class: classes, **@options)
+      options = @options.dup
+      options[:class] = [classes, options[:class]].compact.join(' ')
+      options[:disabled] = @disabled
+      tag.button(content, **options)
     end
 
     private
@@ -17,11 +21,11 @@ module UI
         base_classes,
         variant_classes,
         size_classes
-      ].join(' ')
+      ].compact.join(' ')
     end
 
     def base_classes
-      'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background'
+      'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0'
     end
 
     def variant_classes
