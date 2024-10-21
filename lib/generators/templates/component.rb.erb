@@ -1,0 +1,12 @@
+module UI
+  class <%= class_name %>Component < ViewComponent::Base
+    def initialize(**options)
+      @options = options
+    end
+
+    def call
+      # Implement the component's HTML structure here
+      tag.<%= file_name %>(content, **@options)
+    end
+  end
+end
