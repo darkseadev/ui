@@ -13,11 +13,19 @@ module UI
 
             # Define CamelCase method
             define_method(component_name) do |*args, **kwargs, &block|
+              if instance_variable_defined?(:@parent_table_options)
+                kwargs[:parent_table_options] =
+                  @parent_table_options
+              end
               render(component_class.new(*args, **kwargs), &block)
             end
 
             # Define snake_case method
             define_method(component_name.underscore) do |*args, **kwargs, &block|
+              if instance_variable_defined?(:@parent_table_options)
+                kwargs[:parent_table_options] =
+                  @parent_table_options
+              end
               render(component_class.new(*args, **kwargs), &block)
             end
           end
