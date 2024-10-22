@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module UI
+  # TableOptions module
+  # Provides shared attributes and methods for table-related components
   module TableOptions
     attr_reader :bleed, :dense, :grid, :striped
 
