@@ -1,6 +1,7 @@
 module UI
   class CardComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -20,6 +21,7 @@ module UI
 
   class CardHeaderComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -39,6 +41,7 @@ module UI
 
   class CardFooterComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -58,6 +61,7 @@ module UI
 
   class CardContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -77,6 +81,7 @@ module UI
 
   class CardTitleComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -94,6 +99,7 @@ module UI
 
   class CardDescriptionComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end

@@ -1,6 +1,7 @@
 module UI
   class ButtonComponent < ViewComponent::Base
     def initialize(variant: :default, size: :default, disabled: false, **options)
+      super
       @variant = variant
       @size = size
       @disabled = disabled

@@ -1,6 +1,7 @@
 module UI
   class LabelComponent < ViewComponent::Base
     def initialize(for: nil, class_name: '', **options)
+      super
       @for = binding.local_variable_get(:for)
       @class_name = class_name
       @options = options

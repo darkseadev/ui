@@ -1,6 +1,7 @@
 module UI
   class PopoverComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -20,6 +21,7 @@ module UI
 
   class PopoverTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -43,6 +45,7 @@ module UI
 
   class PopoverContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end

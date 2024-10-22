@@ -1,6 +1,7 @@
 module UI
   class SelectComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -23,6 +24,7 @@ module UI
 
   class SelectTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -51,6 +53,7 @@ module UI
 
   class SelectContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -70,6 +73,7 @@ module UI
 
   class SelectItemComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
+      super
       @value = value
       @class_name = class_name
       @options = options
@@ -100,6 +104,7 @@ module UI
 
   class SelectLabelComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -117,6 +122,7 @@ module UI
 
   class SelectGroupComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end

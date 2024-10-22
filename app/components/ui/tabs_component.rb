@@ -1,6 +1,7 @@
 module UI
   class TabsComponent < ViewComponent::Base
     def initialize(default_value: nil, class_name: nil, **options)
+      super
       @default_value = default_value
       @class_name = class_name
       @options = options
@@ -21,6 +22,7 @@ module UI
 
   class TabsListComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -40,6 +42,7 @@ module UI
 
   class TabsTriggerComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
+      super
       @value = value
       @class_name = class_name
       @options = options
@@ -70,6 +73,7 @@ module UI
 
   class TabsContentComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
+      super
       @value = value
       @class_name = class_name
       @options = options

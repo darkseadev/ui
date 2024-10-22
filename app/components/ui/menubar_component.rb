@@ -1,6 +1,7 @@
 module UI
   class MenubarComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -20,6 +21,7 @@ module UI
 
   class MenubarMenuComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -39,6 +41,7 @@ module UI
 
   class MenubarTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -64,6 +67,7 @@ module UI
 
   class MenubarContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -92,6 +96,7 @@ module UI
 
   class MenubarItemComponent < ViewComponent::Base
     def initialize(class_name: nil, inset: false, disabled: false, **options)
+      super
       @class_name = class_name
       @inset = inset
       @disabled = disabled
@@ -117,6 +122,7 @@ module UI
 
   class MenubarSeparatorComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -134,6 +140,7 @@ module UI
 
   class MenubarSubComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -153,6 +160,7 @@ module UI
 
   class MenubarSubTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, inset: false, **options)
+      super
       @class_name = class_name
       @inset = inset
       @options = options
@@ -188,6 +196,7 @@ module UI
 
   class MenubarSubContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -214,6 +223,7 @@ module UI
 
   class MenubarCheckboxItemComponent < ViewComponent::Base
     def initialize(class_name: nil, checked: false, **options)
+      super
       @class_name = class_name
       @checked = checked
       @options = options
@@ -244,6 +254,7 @@ module UI
 
   class MenubarRadioGroupComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end
@@ -263,6 +274,7 @@ module UI
 
   class MenubarRadioItemComponent < ViewComponent::Base
     def initialize(class_name: nil, checked: false, **options)
+      super
       @class_name = class_name
       @checked = checked
       @options = options
@@ -293,6 +305,7 @@ module UI
 
   class MenubarShortcutComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
     end

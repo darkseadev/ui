@@ -1,6 +1,7 @@
 module UI
   class InputComponent < ViewComponent::Base
     def initialize(type: 'text', class_name: '', disabled: false, **options)
+      super
       @type = type
       @class_name = class_name
       @disabled = disabled

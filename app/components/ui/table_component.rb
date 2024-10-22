@@ -11,6 +11,8 @@ module UI
     include TableOptions
 
     def initialize(bleed: false, dense: false, grid: false, striped: false, class_name: nil, **options)
+      super
+      super
       @bleed = bleed
       @dense = dense
       @grid = grid
@@ -59,6 +61,7 @@ module UI
     include TableOptions
 
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
       set_table_options
@@ -88,6 +91,7 @@ module UI
     include TableOptions
 
     def initialize(bleed: false, dense: false, grid: false, striped: false, **options)
+      super
       @bleed = bleed
       @dense = dense
       @grid = grid
@@ -113,6 +117,7 @@ module UI
     include TableOptions
 
     def initialize(href: nil, target: nil, title: nil, class_name: nil, **options)
+      super
       @href = href
       @target = target
       @title = title
@@ -152,6 +157,7 @@ module UI
     include TableOptions
 
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
       set_table_options
@@ -185,6 +191,7 @@ module UI
     include TableOptions
 
     def initialize(class_name: nil, **options)
+      super
       @class_name = class_name
       @options = options
       set_table_options
