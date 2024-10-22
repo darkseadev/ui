@@ -1,4 +1,18 @@
+# frozen_string_literal: true
+
 module UI
+  # InputComponent is a ViewComponent that renders an HTML input element with customizable attributes.
+  # It provides a flexible and reusable way to create input fields with consistent styling across the application.
+  #
+  # Features:
+  # - Customizable input type (text, password, email, etc.)
+  # - Additional CSS classes can be added
+  # - Disabled state support
+  # - Accepts and passes through additional HTML attributes
+  # - Consistent base styling with focus and disabled states
+  #
+  # Usage:
+  #   <%= input(type: 'email', placeholder: 'Enter your email') %>
   class InputComponent < ViewComponent::Base
     def initialize(type: 'text', class_name: '', disabled: false, **options)
       super

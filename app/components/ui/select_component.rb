@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 module UI
+  # SelectComponent
+  # A base component for creating custom select dropdowns.
+  # It provides the main container for the select functionality.
   class SelectComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -22,6 +27,9 @@ module UI
     end
   end
 
+  # SelectTriggerComponent
+  # Represents the button that triggers the select dropdown.
+  # It displays the currently selected value and handles the toggle action.
   class SelectTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -51,6 +59,9 @@ module UI
     end
   end
 
+  # SelectContentComponent
+  # Represents the content container for the select dropdown.
+  # It holds the list of selectable items and manages the visibility of the dropdown.
   class SelectContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -71,6 +82,9 @@ module UI
     end
   end
 
+  # SelectItemComponent
+  # Represents an individual selectable item within the select dropdown.
+  # It handles the selection action and displays the item's content.
   class SelectItemComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
       super
@@ -102,6 +116,9 @@ module UI
     end
   end
 
+  # SelectLabelComponent
+  # Represents a label within the select dropdown.
+  # It can be used to group or categorize select items.
   class SelectLabelComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -120,6 +137,9 @@ module UI
     end
   end
 
+  # SelectGroupComponent
+  # Represents a group of select items.
+  # It can be used to organize related items within the dropdown.
   class SelectGroupComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super

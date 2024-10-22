@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module UI
   module TableOptions
     attr_reader :bleed, :dense, :grid, :striped
@@ -7,6 +9,22 @@ module UI
     end
   end
 
+  # TableComponent
+  # This component represents the main table structure.
+  # It handles the overall table layout and styling, including options for
+  # bleed, density, grid lines, and striping.
+  #
+  # Usage:
+  #   <%= table(bleed: true, dense: false, grid: true, striped: true) do %>
+  #     <!-- Table content -->
+  #   <% end %>
+  #
+  # Options:
+  #   - bleed: (Boolean) Extends table to full width of container
+  #   - dense: (Boolean) Reduces vertical padding in cells
+  #   - grid: (Boolean) Adds vertical grid lines
+  #   - striped: (Boolean) Alternates background color of rows
+  #   - class_name: (String) Additional CSS classes for the table
   class TableComponent < ViewComponent::Base
     include TableOptions
 
@@ -57,6 +75,17 @@ module UI
     end
   end
 
+  # TableHeadComponent
+  # This component represents the header section of the table.
+  # It handles the styling and rendering of the table header.
+  #
+  # Usage:
+  #   <%= table_head do %>
+  #     <!-- Header content -->
+  #   <% end %>
+  #
+  # Options:
+  #   - class_name: (String) Additional CSS classes for the header
   class TableHeadComponent < ViewComponent::Base
     include TableOptions
 
@@ -87,6 +116,18 @@ module UI
     end
   end
 
+  # TableBodyComponent
+  # This component represents the body section of the table.
+  # It handles the rendering of the table body and inherits table options
+  # from its parent.
+  #
+  # Usage:
+  #   <%= table_body do %>
+  #     <!-- Body content -->
+  #   <% end %>
+  #
+  # Options:
+  #   - bleed, dense, grid, striped: (Boolean) Table styling options
   class TableBodyComponent < ViewComponent::Base
     include TableOptions
 
@@ -113,6 +154,21 @@ module UI
     end
   end
 
+  # TableRowComponent
+  # This component represents a single row in the table.
+  # It handles row-specific styling, including support for linkable rows
+  # and striping effects.
+  #
+  # Usage:
+  #   <%= table_row(href: '/path') do %>
+  #     <!-- Row content -->
+  #   <% end %>
+  #
+  # Options:
+  #   - href: (String) URL for linkable row
+  #   - target: (String) Target attribute for linkable row
+  #   - title: (String) Title attribute for linkable row
+  #   - class_name: (String) Additional CSS classes for the row
   class TableRowComponent < ViewComponent::Base
     include TableOptions
 
@@ -153,6 +209,18 @@ module UI
     end
   end
 
+  # TableHeaderComponent
+  # This component represents a header cell in the table.
+  # It handles the styling and rendering of individual header cells,
+  # including border and padding adjustments based on table options.
+  #
+  # Usage:
+  #   <%= table_header do %>
+  #     Header Cell Content
+  #   <% end %>
+  #
+  # Options:
+  #   - class_name: (String) Additional CSS classes for the header cell
   class TableHeaderComponent < ViewComponent::Base
     include TableOptions
 
@@ -187,6 +255,19 @@ module UI
     end
   end
 
+  # TableCellComponent
+  # This component represents a data cell in the table.
+  # It handles the styling and rendering of individual data cells,
+  # including support for linkable cells and various table options.
+  #
+  # Usage:
+  #   <%= table_cell(href: '/path') do %>
+  #     Cell Content
+  #   <% end %>
+  #
+  # Options:
+  #   - class_name: (String) Additional CSS classes for the cell
+  #   - href: (String) URL for linkable cell
   class TableCellComponent < ViewComponent::Base
     include TableOptions
 

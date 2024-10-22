@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 module UI
+  # Represents the main menubar container component
+  # This component wraps the entire menubar structure
   class MenubarComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -19,6 +23,8 @@ module UI
     end
   end
 
+  # Represents a menu within the menubar
+  # This component is used to group related menu items
   class MenubarMenuComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -39,6 +45,8 @@ module UI
     end
   end
 
+  # Represents the clickable trigger for a menu
+  # This component is used to open/close a menu when clicked
   class MenubarTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -65,6 +73,8 @@ module UI
     end
   end
 
+  # Represents the content container for menu items
+  # This component holds the actual menu items and is shown/hidden based on the trigger state
   class MenubarContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -94,6 +104,8 @@ module UI
     end
   end
 
+  # Represents a single menu item
+  # This component is used for standard, clickable menu options
   class MenubarItemComponent < ViewComponent::Base
     def initialize(class_name: nil, inset: false, disabled: false, **options)
       super
@@ -120,6 +132,8 @@ module UI
     end
   end
 
+  # Represents a visual separator between menu items
+  # This component is used to group or separate menu items visually
   class MenubarSeparatorComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -138,6 +152,8 @@ module UI
     end
   end
 
+  # Represents a submenu container within a menu
+  # This component is used to create nested menu structures
   class MenubarSubComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -158,6 +174,8 @@ module UI
     end
   end
 
+  # Represents the trigger for a submenu
+  # This component is used to open/close a submenu when clicked or hovered
   class MenubarSubTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, inset: false, **options)
       super
@@ -194,6 +212,8 @@ module UI
     end
   end
 
+  # Represents the content container for submenu items
+  # This component holds the actual submenu items and is shown/hidden based on the subtrigger state
   class MenubarSubContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -221,6 +241,8 @@ module UI
     end
   end
 
+  # Represents a checkbox item within a menu
+  # This component is used for menu options that can be toggled on/off
   class MenubarCheckboxItemComponent < ViewComponent::Base
     def initialize(class_name: nil, checked: false, **options)
       super
@@ -252,6 +274,8 @@ module UI
     end
   end
 
+  # Represents a group of radio items within a menu
+  # This component is used to group related radio items
   class MenubarRadioGroupComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -272,6 +296,8 @@ module UI
     end
   end
 
+  # Represents a radio item within a menu
+  # This component is used for menu options where only one item in a group can be selected
   class MenubarRadioItemComponent < ViewComponent::Base
     def initialize(class_name: nil, checked: false, **options)
       super
@@ -303,6 +329,8 @@ module UI
     end
   end
 
+  # Represents a keyboard shortcut hint for a menu item
+  # This component is used to display keyboard shortcuts next to menu items
   class MenubarShortcutComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super

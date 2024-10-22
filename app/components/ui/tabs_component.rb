@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 module UI
+  # TabsComponent
+  # A ViewComponent that represents a tabbed interface.
+  # It serves as the main container for the tabbed content.
   class TabsComponent < ViewComponent::Base
     def initialize(default_value: nil, class_name: nil, **options)
       super
@@ -20,6 +25,9 @@ module UI
     end
   end
 
+  # TabsListComponent
+  # A ViewComponent that represents the container for tab triggers.
+  # It creates a styled list of tab buttons.
   class TabsListComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -40,6 +48,9 @@ module UI
     end
   end
 
+  # TabsTriggerComponent
+  # A ViewComponent that represents an individual tab button.
+  # It handles the selection and styling of each tab.
   class TabsTriggerComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
       super
@@ -71,6 +82,9 @@ module UI
     end
   end
 
+  # TabsContentComponent
+  # A ViewComponent that represents the content area for each tab.
+  # It manages the visibility and styling of the content associated with each tab.
   class TabsContentComponent < ViewComponent::Base
     def initialize(value:, class_name: nil, **options)
       super

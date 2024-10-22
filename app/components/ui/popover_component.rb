@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 module UI
+  # PopoverComponent is the main container for the popover functionality.
+  # It wraps the trigger and content components, providing the necessary
+  # structure and data attributes for the popover behavior.
   class PopoverComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -19,6 +24,9 @@ module UI
     end
   end
 
+  # PopoverTriggerComponent represents the clickable element that toggles
+  # the popover content visibility. It can be rendered as either a button
+  # or a div, depending on the content provided.
   class PopoverTriggerComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super
@@ -43,6 +51,9 @@ module UI
     end
   end
 
+  # PopoverContentComponent represents the content that is shown or hidden
+  # when the popover is toggled. It includes styling and data attributes
+  # for proper positioning and animation of the popover content.
   class PopoverContentComponent < ViewComponent::Base
     def initialize(class_name: nil, **options)
       super

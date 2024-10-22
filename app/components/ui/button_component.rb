@@ -1,4 +1,19 @@
+# frozen_string_literal: true
+
 module UI
+  # ButtonComponent is a flexible and customizable button component for use in Ruby on Rails applications.
+  # It provides various styling options through variants and sizes, and can be easily integrated into views.
+  #
+  # Features:
+  # - Multiple variants: default, destructive, outline, secondary, ghost, and link
+  # - Multiple sizes: default, small (sm), large (lg), and icon
+  # - Disabled state support
+  # - Customizable with additional HTML options
+  #
+  # Usage:
+  #   <%= button(variant: :primary, size: :lg) do %>
+  #     Click me!
+  #   <% end %>
   class ButtonComponent < ViewComponent::Base
     def initialize(variant: :default, size: :default, disabled: false, **options)
       super
